@@ -12,22 +12,22 @@ AndroidEmoji
 
 ## Screen Record
 
-<img src="output/emoji-system-little.png" />
-<img src="output/emoji-common-little.png" />
-<img src="output/emoji-all-little.png" />
+<img src="output/emoji-system-little.png" width="32%" />
+<img src="output/emoji-common-little.png" width="32%"/>
+<img src="output/emoji-all-little.png" width="32%"/>
  
 # XhsEmoticonsKeyboard
 
 If you need a keyboard --> [XhsEmoticonsKeyboard](https://github.com/w446108264/XhsEmoticonsKeyboard) 
 
-<img src="output/chat-qqemoticon.png" width="12%" /> 
-<img src="output/chat-qqplug.png" width="12%" /> 
-<img src="output/chat-qqfav.png" width="12%" />  
-<img src="output/chat-bigimage.png" width="12%" /> 
-<img src="output/chat-userdefui.png" width="12%" /> 
-<img src="output/chat-text.png" width="12%" />  
-<img src="output/simple-comment.png" width="12%" /> 
-<img src="output/main.png" width="12%" /> 
+<img src="https://github.com/w446108264/XhsEmoticonsKeyboard/raw/master/output/chat-qqemoticon.png" width="12%" /> 
+<img src="https://github.com/w446108264/XhsEmoticonsKeyboard/raw/master/output/chat-qqplug.png" width="12%" /> 
+<img src="https://github.com/w446108264/XhsEmoticonsKeyboard/raw/master/output/chat-qqfav.png" width="12%" />  
+<img src="https://github.com/w446108264/XhsEmoticonsKeyboard/raw/master/output/chat-bigimage.png" width="12%" /> 
+<img src="https://github.com/w446108264/XhsEmoticonsKeyboard/raw/master/output/chat-userdefui.png" width="12%" /> 
+<img src="https://github.com/w446108264/XhsEmoticonsKeyboard/raw/master/output/chat-text.png" width="12%" />  
+<img src="https://github.com/w446108264/XhsEmoticonsKeyboard/raw/master/output/simple-comment.png" width="12%" /> 
+<img src="https://github.com/w446108264/XhsEmoticonsKeyboard/raw/master/output/main.png" width="12%" /> 
 
 # Samples
 
