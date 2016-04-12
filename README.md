@@ -5,23 +5,35 @@
 AndroidEmoji
 
 
-## Screen Recod
-
-<img src="output/emoji-system-little.png" />
-<img src="output/emoji-common-little.png" />
-<img src="output/emoji-all-little.png" />
-
-
 # Features
 
 * API > 9 
 * Support load emoji from file  
 
+## Screen Record
+
+<img src="output/emoji-system-little.png" />
+<img src="output/emoji-common-little.png" />
+<img src="output/emoji-all-little.png" />
+ 
+# XhsEmoticonsKeyboard
+
+If you need a keyboard --> [XhsEmoticonsKeyboard](https://github.com/w446108264/XhsEmoticonsKeyboard) 
+
+<img src="output/chat-qqemoticon.png" width="12%" /> 
+<img src="output/chat-qqplug.png" width="12%" /> 
+<img src="output/chat-qqfav.png" width="12%" />  
+<img src="output/chat-bigimage.png" width="12%" /> 
+<img src="output/chat-userdefui.png" width="12%" /> 
+<img src="output/chat-text.png" width="12%" />  
+<img src="output/simple-comment.png" width="12%" /> 
+<img src="output/main.png" width="12%" /> 
+
 # Samples
 
 You can [download a sample APK](https://github.com/w446108264/AndroidEmoji/raw/master/output/simple.apk) 
-
-
+ 
+ 
 # Gradle Dependency
 
 Users of your library will need add the jitpack.io repository:
