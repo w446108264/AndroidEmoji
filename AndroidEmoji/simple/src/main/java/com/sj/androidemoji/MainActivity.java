@@ -8,10 +8,10 @@ import android.content.pm.PackageManager;
 import android.graphics.Paint;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Spannable;
 import android.text.SpannableStringBuilder;
@@ -100,15 +100,36 @@ public class MainActivity extends AppCompatActivity {
             setTitle(getString(R.string.app_name) + "-" + "Common");
             return true;
         }
-        // parse all emoji
-        else if (id == R.id.action_2) {
-            unzipEmoji();
-            spannableEmoticonFilterFromFile(tv_data, emojiString);
-            setTitle(getString(R.string.app_name) + "-" + "All");
+        // parse all emoji apple
+        else if (id == R.id.action_apple) {
+            unzipEmoji("img-apple-64.zip");
+            spannableEmoticonFilterFromFile(tv_data, FileUtils.getFolderPath() + "/img-apple-64/" ,emojiString);
+            setTitle(getString(R.string.app_name) + "-" + "Apple");
+            return true;
+        }
+        // parse all emoji google
+        else if (id == R.id.action_google) {
+            unzipEmoji("img-google-64.zip");
+            spannableEmoticonFilterFromFile(tv_data, FileUtils.getFolderPath() + "/img-google-64/" ,emojiString);
+            setTitle(getString(R.string.app_name) + "-" + "Google");
+            return true;
+        }
+        // parse all emoji twitter
+        else if (id == R.id.action_twitter) {
+            unzipEmoji("img-twitter-64.zip");
+            spannableEmoticonFilterFromFile(tv_data, FileUtils.getFolderPath() + "/img-twitter-64/" ,emojiString);
+            setTitle(getString(R.string.app_name) + "-" + "Twitter");
+            return true;
+        }
+        // parse all emoji emojione
+        else if (id == R.id.action_emojione) {
+            unzipEmoji("img-emojione-64.zip");
+            spannableEmoticonFilterFromFile(tv_data, FileUtils.getFolderPath() + "/img-emojione-64/" ,emojiString);
+            setTitle(getString(R.string.app_name) + "-" + "Emojione");
             return true;
         }
         // github
-        else if (id == R.id.action_3) {
+        else if (id == R.id.action_github) {
             Uri uri = Uri.parse("http://github.com/w446108264/AndroidEmoji");
             Intent it = new Intent(Intent.ACTION_VIEW, uri);
             startActivity(it);
@@ -117,10 +138,11 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public static void spannableEmoticonFilterFromFile(TextView tv_content, String content) {
+    public static void spannableEmoticonFilterFromFile(final TextView tv_content, String filePath, String content) {
         SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(content);
 
         Spannable spannable = EmojiDisplayFromFIle.spannableFilter(tv_content.getContext(),
+                filePath,
                 spannableStringBuilder,
                 content,
                 getFontHeight(tv_content)
@@ -145,14 +167,14 @@ public class MainActivity extends AppCompatActivity {
         return (int) Math.ceil(fm.bottom - fm.top);
     }
 
-    public void unzipEmoji() {
-        String filePath = FileUtils.getFolderPath();
+    public void unzipEmoji(String emojiZipFileName) {
+        String filePath = FileUtils.getFolderPath() + "/" + emojiZipFileName.substring(0,emojiZipFileName.indexOf("."));
         File dest = new File(filePath);
         if (dest.exists()) {
             return;
         }
         try {
-            FileUtils.unzip(getAssets().open("emoji.zip"), filePath);
+            FileUtils.unzip(getAssets().open(emojiZipFileName), FileUtils.getFolderPath());
         } catch (IOException e) {
             e.printStackTrace();
         }

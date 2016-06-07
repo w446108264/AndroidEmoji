@@ -15,13 +15,31 @@
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_2"
+        android:id="@+id/action_apple"
         android:orderInCategory="100"
-        android:title="parse all emoji"
+        android:title="parse apple"
         app:showAsAction="never" />
 
     <item
-        android:id="@+id/action_3"
+        android:id="@+id/action_google"
+        android:orderInCategory="100"
+        android:title="parse google"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_twitter"
+        android:orderInCategory="100"
+        android:title="parse twitter"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_emojione"
+        android:orderInCategory="100"
+        android:title="parse emojione"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_github"
         android:orderInCategory="100"
         android:title="github"
         app:showAsAction="never" />

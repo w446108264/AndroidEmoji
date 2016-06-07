@@ -13,8 +13,12 @@ import java.util.regex.Pattern;
  */
 public class EmojiDisplay {
 
+    //                                                            0x20a0-0x32ff          0x1f00-0x1fff              0xfe4e5-0xfe4ee
+    //                                                           |==== misc ====||======== emoticons ========||========= flags ==========|
+    @SuppressWarnings("MalformedRegex")
+    private static final Pattern EMOJI_RANGE = Pattern.compile("[\\u20a0-\\u32ff\\ud83c\\udc00-\\ud83d\\udeff\\udbb9\\udce5-\\udbb9\\udcee]");
+
     public static final int WRAP_DRAWABLE = -1;
-    public static final Pattern EMOJI_RANGE = Pattern.compile("[\\u20a0-\\u32ff\\ud83c\\udc00-\\ud83d\\udeff\\udbb9\\udce5-\\udbb9\\udcee]");
 
     public static Matcher getMatcher(CharSequence matchStr) {
         return EMOJI_RANGE.matcher(matchStr);

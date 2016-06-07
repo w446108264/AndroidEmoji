@@ -15,19 +15,19 @@ import java.util.regex.Matcher;
  */
 public class EmojiDisplayFromFIle extends EmojiDisplay{
 
-    public static Spannable spannableFilter(Context context, Spannable spannable, CharSequence text, int fontSize, EmojiDisplayListener emojiDisplayListener) {
+    public static Spannable spannableFilter(Context context, String filePath, Spannable spannable, CharSequence text, int fontSize, EmojiDisplayListener emojiDisplayListener) {
         Matcher m = getMatcher(text);
         if (m != null) {
             while (m.find()) {
                 String emojiHex = Integer.toHexString(Character.codePointAt(m.group(), 0));
-                emojiDisplay(context, spannable, emojiHex, fontSize, m.start(), m.end());
+                emojiDisplay(context, filePath, spannable, emojiHex, fontSize, m.start(), m.end());
             }
         }
         return spannable;
     }
 
-    public static void emojiDisplay(Context context, Spannable spannable, String emojiHex, int fontSize, int start, int end) {
-        Drawable drawable = Drawable.createFromPath(FileUtils.getFolderPath() + "/emoji_" + emojiHex + ".png");
+    public static void emojiDisplay(Context context, String filePath, Spannable spannable, String emojiHex, int fontSize, int start, int end) {
+        Drawable drawable = Drawable.createFromPath(filePath + emojiHex + ".png");
         if (drawable != null) {
             int itemHeight;
             int itemWidth;
