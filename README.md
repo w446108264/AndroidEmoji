@@ -8,13 +8,21 @@ AndroidEmoji
 # Features
 
 * API > 9 
-* Support load emoji from file  
+* Support load emoji from file.
+* Support load emoji asynchronously.
+* Suppoet apple,google,twitter,emojione, [Get source.](https://github.com/w446108264/AndroidEmoji/blob/master/AndroidEmoji/simple/assets/
+) 
+* More thin.  
 
 ## Screen Record
 
-<img src="output/emoji-system-little.png" width="32%" />
-<img src="output/emoji-common-little.png" width="32%"/>
-<img src="output/emoji-all-little.png" width="32%"/>
+<img src="output/main.png" width="60%"/>
+
+<img src="output/emoji_system.png" width="19%"/>
+<img src="output/emoji_apple.png" width="19%" />
+<img src="output/emoji_google.png" width="19%"/>
+<img src="output/emoji_twitter.png" width="19%"/>
+<img src="output/emoji_emojione.png" width="19%"/>
  
 # XhsEmoticonsKeyboard
 
@@ -51,7 +59,7 @@ and:
 
 ```xml
 dependencies { 
-    compile 'com.github.w446108264:AndroidEmoji:1.0.0'
+    compile 'com.github.w446108264:AndroidEmoji:1.1.1'
 }
 ```
 --
@@ -60,15 +68,17 @@ dependencies {
 
 ```java
 
-        SpannableStringBuilder spannableStringBuilder = new SpannableStringBuilder(content); 
-        Spannable spannable = EmojiDisplay.spannableFilter(tv_content.getContext(),
-                spannableStringBuilder,
-                content,
-                getFontHeight(tv_content));
-        tv_content.setText(spannable);
+// The frist, you should put some emoji images to your project.
+// see demo!
+Spannable spannable = EmojiDisplay.filterFromResource(tv_content.getContext(),
+                    new SpannableStringBuilder(content),
+                    EmojiDisplay.getFontHeight(tv_content),EmojiDisplay.HEAD_NAME, null);
+tv_content.setText(spannable);
 
 ```
+# Thanks
  
+ * [https://github.com/iamcal/emoji-data](https://github.com/iamcal/emoji-data)
  
 # Contact & Help
 
