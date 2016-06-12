@@ -6,18 +6,22 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.text.style.ImageSpan;
+import android.view.View;
 
 /**
  * Created by sj on 16/3/22.
  */
 public class EmojiSpan extends ImageSpan {
 
-    public EmojiSpan(Drawable drawable) {
-        super(drawable);
-    }
+    public EmojiSpan(Drawable drawable) { super(drawable); }
 
     public EmojiSpan(Context context, int resourceId) {
         super(context, resourceId);
+    }
+
+    public EmojiSpan(Drawable drawable, View view) {
+        super(drawable);
+        drawable.setCallback(view);
     }
 
     public int getSize(Paint paint, CharSequence text, int start, int end, Paint.FontMetricsInt fontMetricsInt) {
