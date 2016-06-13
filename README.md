@@ -59,7 +59,16 @@ and:
 
 ```xml
 dependencies { 
-    compile 'com.github.w446108264:AndroidEmoji:1.1.1'
+
+    // see branch/master 
+    // without any emoji,just a lib to parse emoji, very thin.
+    // you have to get emoji source and load them from file or other by yourself. -> 
+    // https://github.com/w446108264/AndroidEmoji/blob/master/AndroidEmoji/simple/assets/
+    compile 'com.github.w446108264:AndroidEmoji:1.3'
+    
+    // see branch/withsource 
+    // include some emoji sources 
+//  compile 'com.github.w446108264:AndroidEmoji:1.3-withsource'
 }
 ```
 --
