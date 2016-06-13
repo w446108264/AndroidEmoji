@@ -24,7 +24,7 @@ public class EmojiDisplay {
 
     public static final int WRAP_DRAWABLE = -1;
 
-    protected static Matcher getMatcher(CharSequence matchStr) {
+    public static Matcher getMatcher(CharSequence matchStr) {
         return EMOJI_RANGE.matcher(matchStr);
     }
 
