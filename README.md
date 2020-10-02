@@ -1,4 +1,4 @@
-# AndroidEmoji
+# AndroidEmoji collections
 
 > j.s 🇨🇳
 
